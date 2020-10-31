@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <style>
+            .imgbox-1{
+                border:250px;
+                height:500px;
+                float: center;
+                display: block;
+                margin: auto;
+            }
+            .imgbox-2{
+                float: center;
+                border:auto;
+                height:auto;
+            }
+            .boxbox{
+                padding-left: 10px;
+                padding-right: 10px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                border-left: 40px solid red;
+                border-right: 40px solid blue;
+                border-top: 30px solid green;
+                border-bottom: 30px solid yellow;
+                margin-left: 50px;
+                margin-right: 50px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                height: 108px;
+                width: 199px;
+                display: block;
+                opacity: 0.1;
+            }
+            h1{
+                color:rgb(0, 163, 0);
+                font: size 75px;
+                text-align:center;
+                margin: 20px;
+                padding: 20px;
+            }
+            .red-box{
+                color:red;
+                font-size: 10px;
+            }
+        </style>
+        <script>
+            function selector(){
+                var selected=prompt('선택할 합수를 입력하세요. 1. 게산기 2. 로그인 3. 종료');
+                selected=Number(selected);
+                if(selected==1){
+                    add();}
+                if(selected==2){
+                    login();}
+                if(selected==3){
+                }
+                else{
+                    alert("잘못된 입력이에요!");
+                    selector();}
+            }
+               function login(){
+                  const id = "min2_091";
+                  const pw= "wlalsakstp07";
+                  var jvID=prompt('Input your ID',' ');
+                  var jvPW=prompt('Input your PW',' ');
+                  if(jvID==id && jvPW==pw){
+                   alert('로그인 성공');
+                  }
+                  else{
+                      var result = confirm("로그인 실패, 다시 시도하시겠습니다까?");
+                      if(confirm==1){
+                          console.log("시스템 종료");
+                       }
+                      else{
+                          console.log("시스템 종료");
+                       }
+                  }
+               }
+               function add(){
+                   var pluse=confirm("계산기를 사용하시겠습니까?");
+                   if(pluse==0){
+                    var firstnum=prompt("계산할 첫번째수를 입력하세요",' ');
+                    var secondnum=prompt("계산한 두번째 수를 입력하세요",' ');
+                    var afterresult = Number(firstnum) + Number(secondnum);
+                    alert(afterresult);
+                   }
+               }
+            selector();
+        </script>
+        <meta charset="utf=8">
+        <title>Test</title>
+    </head>
+    <body>
+        <h1 class="boxbox">Test title</h1>
+        <p class="red-box">Test world</p>
+        <details>
+        <summary>Test</summary>
+       <pre class="boxbox">
+           Test
+       </pre>
+       </details>
+       <p><img class="boxbox" src="andro.jpeg" alt="은하수"></p>
+    </body>
+</html>
